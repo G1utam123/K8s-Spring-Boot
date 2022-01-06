@@ -3,6 +3,13 @@ Spring Boot Microservices labs on K8s
 
 1. Install Docker Desktop and enable kubernetes service 
 
+Note : For new versions of Docker Desktop, run the below command
+
+Spring Cloud Kubernetes requires access to Kubernetes API in order to be able to retrieve a list of addresses of pods running 
+for a single service. If you use Kubernetes you should just execute the following command:
+
+> kubectl create clusterrolebinding admin --clusterrole=cluster-admin --serviceaccount=default:default
+
 2. execute the below steps to run the applications on K8s    	  	  
 kubectl create deployment  simple-rest-api --image=jbossramana/microservices:simple   
 kubectl expose deployment simple-rest-api --type=LoadBalancer --port=8080   
