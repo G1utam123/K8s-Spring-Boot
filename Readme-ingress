@@ -26,3 +26,11 @@ kubectl get pods --namespace=ingress-nginx
    http://demo.localdev.me:8080/other
    
    
+9. To describe the ingress service
+kubectl describe ingress
+
+10. To create a resource using yaml
+kubectl apply -f ingress.yaml
+
+11. To delete a resource using yaml
+kubectl delete -f ingress.yaml
