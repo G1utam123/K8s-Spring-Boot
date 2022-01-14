@@ -13,9 +13,11 @@ kubectl get pods --namespace=ingress-nginx
    
 5. kubectl create clusterrolebinding admin --clusterrole=cluster-admin --serviceaccount=default:default
 
-6. kubectl create ingress demo-localhost --class=nginx  --rule=demo.localdev.me/simple=simple-rest-api:8080
+6. create an ingress resource. The following example uses an host that maps to localhost
+   kubectl create ingress demo-localhost --class=nginx  --rule=demo.localdev.me/simple=simple-rest-api:8080
 
-7. kubectl create ingress demo-localhost2 --class=nginx  --rule=demo.localdev.me/other=other-rest-api:8081
+7. create an ingress resource. The following example uses an host that maps to localhost
+   kubectl create ingress demo-localhost2 --class=nginx  --rule=demo.localdev.me/other=other-rest-api:8081
 
 8.kubectl port-forward --namespace=ingress-nginx service/ingress-nginx-controller 8080:80
 
