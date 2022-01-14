@@ -34,3 +34,6 @@ kubectl apply -f ingress.yaml
 
 11. To delete a resource using yaml
 kubectl delete -f ingress.yaml
+
+12. To generate yaml file from existing service
+kubectl get service --all-namespaces -o yaml  > all-service.yaml
