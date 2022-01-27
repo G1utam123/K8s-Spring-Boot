@@ -16,11 +16,11 @@ node {
             docker.build('springboot')
         }
  //4// stage ('Docker push')
-    docker.withRegistry('https://<accountno>.dkr.ecr.ap-south-1.amazonaws.com', 'ecr:ap-south-1:test-ecr') {
+    docker.withRegistry('https://727005366052.dkr.ecr.us-east-1.amazonaws.com/springboot', 'ecr.us-east-1.amazonaws:test-boot') {
     docker.image('springboot').push('latest')
         }
   
  //5// stage ('K8S Deploy'){
-                    sh 'kubectl apply -f spring-boot.yaml'
+                    sh 'kubectl apply -f k8s-boot.yaml'
       } 
        }
