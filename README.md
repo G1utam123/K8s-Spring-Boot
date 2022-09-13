@@ -16,6 +16,8 @@ kubectl expose deployment simple-rest-api --type=LoadBalancer --port=8080
 kubectl create deployment  other-rest-api --image=jbossramana/microservices:other   
 kubectl expose deployment  other-rest-api --type=LoadBalancer --port=8081   
 
+* Take a replication controller, service or pod and expose it as a new Kubernetes Service
+* 
 3. Test the appliction url's  
 
 http://localhost:8080/simple  
