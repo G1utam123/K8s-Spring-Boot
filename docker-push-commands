@@ -4,7 +4,7 @@ docker build -t <username>/<repository-name>:<tag-name>
 docker build -t jbossramana/microservices:userservice .
 
 2. To login to docker hub
-docker login
+docker login -ujbossramana
 
 3. To push the image
 docker push jbossramana/microservices:userservice
