@@ -1,0 +1,52 @@
+Docker build
+------------
+
+We can build a tagged docker image using the below command :
+$ docker build . -–tag=sample
+
+
+
+Docker run
+-----------
+
+We do NOT have to register with docker or publish anything to run a docker image. We can still have a locally tagged image, and run it like this:
+
+$ docker run -p  8888:8080 -t   <Image-ID>
+
+
+docker images
+-------------
+To list all docker images
+
+
+docker ps
+---------
+
+This command is used to list the running containers
+
+$ docker ps
+
+
+docker stop
+-----------
+
+Usage: docker stop <container id>
+
+
+docker rmi
+----------
+
+To remove a docker image
+docker rmi <your-image-id>
+
+
+docker kill
+-----------
+
+Usage: docker kill <container id>
+
+
+
+
+
+
