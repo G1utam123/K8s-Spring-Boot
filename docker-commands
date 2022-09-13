@@ -13,6 +13,8 @@ We do NOT have to register with docker or publish anything to run a docker image
 
 $ docker run -p  8888:8080 -t   <Image-ID>
 
+note : use -d to run it as a backgroup process
+
 
 docker images
 -------------
