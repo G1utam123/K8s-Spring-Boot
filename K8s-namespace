@@ -24,7 +24,7 @@ Viewing namespaces
 
 We can list the current namespaces in a cluster using:
 
-kubectl get namespace
+> kubectl get namespace
 NAME              STATUS   AGE
 default           Active   1d
 kube-node-lease   Active   1d
@@ -40,6 +40,9 @@ kube-public: This namespace is created automatically and is readable by all user
 kube-node-lease: This namespace holds Lease objects associated with each node. Node leases allow the kubelet to send heartbeats 
              so that the control plane can detect node failure.
 
+
+To Check the resources in a specific namespace :
+kubectl get namespace default
 
 
 Setting the namespace for a request
